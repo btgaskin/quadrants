@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-10T00:53:16.174101+00:00",
+  "head": "40e7289ec619148cfb8eaa3b8bd1d7d7491d73d1",
+  "pr_base": "82467d548",
+  "upstream_main_checked": "87761ef3288dd92085adc562ea1ffc2c8af4607b",
+  "upstream_ahead_by": 1,
+  "upstream_change": "#952 block_idx Vulkan/Metal, no changed-file overlap",
+  "files": {
+    "docs/source/user_guide/algorithms.md": "0cf9150e8f60fc5829276a0aff930c38d3c189dca60dd5880065f840d3ecf42e",
+    "docs/source/user_guide/csr_spmm.md": "deleted",
+    "docs/source/user_guide/index.md": "9d422819fcd5d59d815c57f206303255cf608d6eb845e6d8c96a42f925af90a8",
+    "misc/demos/csr_spmm_esn.py": "deleted",
+    "python/quadrants/algorithms/__init__.py": "ee3d5817e10b497cacc3e5b0a4ce1f8c3bf58ee6cd050fcd5bac1dc7d23a2303",
+    "python/quadrants/algorithms/_csr.py": "deleted",
+    "python/quadrants/examples/csr_spmm.py": "deleted",
+    "python/quadrants/lang/ast/ast_transformer.py": "e1290d74bf9b4da148b55395ea98d3a13f9b83a11493dbfcbb0cacd73abe916e",
+    "python/quadrants/linalg/__init__.py": "c7b4c7f18b625a1385571add805bfa26eaf7ad3ebbb219d64ec17bb9d2e1dd9c",
+    "python/quadrants/linalg/sparse_cg.py": "dbe07ea52e374f34d9e7a2213c4cfd0485194810b5f5b69291cb5a05aa5d8d97",
+    "python/quadrants/linalg/sparse_matrix.py": "38131d721b2334cfa0c4d8c86465e99501424b9e32bde9f6a57a7d386e6392cf",
+    "tests/python/test_csr_spmm.py": "b432e42ddc6d2e7cbe9eff19465266b051abcff060a87a57120d5fed55ad1262",
+    "tests/python/test_csr_spmm_esn_demo.py": "deleted",
+    "python/quadrants/linalg/_csr.py": "59ca41743a4630ff1a8d0639e8f8362bbd55380b072914c467f5f592a2e65a75"
+  },
+  "measured_vs_final_ast_equal": true,
+  "native_core": "/Users/bengaskin/dev/quadrants/build/cp310-cp310-macosx_26_0_arm64/install/platlib/quadrants/_lib/core/quadrants_python.cpython-310-darwin.so",
+  "native_core_sha256": "d0ac26d18fe6e294fcda380745814acc77c7706333956abbf33b2f588dd4330b"
+}

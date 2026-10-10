@@ -1,0 +1,57 @@
+Namespace(files=['csr_spmm'], cpp=False, show_output=False, verbose=True, rerun=None, keys=None, marks=None, run_slow=False, failed_first=None, fail_fast=None, maxfail=1, coverage=None, timeout=600, cov_append=None, threads='1', arch='cuda', exclusive=False)
+Running on Arch=cuda
+
+Running Python tests...
+
+Starting 1 testing thread(s)...
+============================= test session starts ==============================
+platform linux -- Python 3.10.13, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /payload/tests
+configfile: pytest.ini
+plugins: rerunfailures-15.1, quadrants-1.3.4.dev10+g9b758de85, retry-1.7.0, cov-7.1.0, nbmake-1.5.5, xdist-3.8.0, platformdirs-4.12.4, typeguard-4.3.0
+timeout: 600s
+timeout func_only: False
+collecting ... collected 19 items
+
+tests/python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=cuda-False] PASSED [  5%]
+tests/python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=cuda-True] PASSED [ 10%]
+tests/python/test_csr_spmm.py::test_csr_spmm_duplicates_empty_rows_and_poison_tail[arch=cuda] PASSED [ 15%]
+tests/python/test_csr_spmm.py::test_csr_spmm_rectangular_widths_and_changed_bindings[arch=cuda] PASSED [ 21%]
+tests/python/test_csr_spmm.py::test_csr_spmm_updated_values_and_rhs_in_existing_buffers[arch=cuda] PASSED [ 26%]
+tests/python/test_csr_spmm.py::test_csr_spmm_producer_two_calls_and_consumer[arch=cuda] PASSED [ 31%]
+tests/python/test_csr_spmm.py::test_csr_spmm_ping_pong_recurrence[arch=cuda] PASSED [ 36%]
+tests/python/test_csr_spmm.py::test_csr_spmm_shared_column_and_independent_ragged_batches[arch=cuda] PASSED [ 42%]
+tests/python/test_csr_spmm.py::test_csr_spmm_difficult_cancellation_and_long_rows[arch=cuda] PASSED [ 47%]
+tests/python/test_csr_spmm.py::test_csr_spmm_float32_accumulator_with_float64_default SKIPPED [ 52%]
+tests/python/test_csr_spmm.py::test_csr_host_product_borrows_buffers_and_reads_current_contents[arch=cuda] PASSED [ 57%]
+tests/python/test_csr_spmm.py::test_csr_kernel_product_evaluates_rhs_once_and_reads_current_contents[arch=cuda] PASSED [ 63%]
+tests/python/test_csr_spmm.py::test_csr_metadata_validation[arch=cuda] PASSED [ 68%]
+tests/python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_do_not_access_storage[arch=cuda] PASSED [ 73%]
+tests/python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_report_debug_error[arch=cuda] PASSED [ 78%]
+tests/python/test_csr_spmm.py::test_csr_nested_typed_binding_and_specialization[arch=cuda] PASSED [ 84%]
+tests/python/test_csr_spmm.py::test_csr_native_interoperability_errors SKIPPED [ 89%]
+tests/python/test_csr_spmm.py::test_csr_rejects_reverse_mode SKIPPED     [ 94%]
+tests/python/test_csr_spmm.py::test_csr_public_exports[none] PASSED      [100%]
+
+------------------ generated xml file: /results/cuda-csr.xml -------------------
+
+Learn more about nbmake at https://github.com/treebeardtech/nbmake
+
+============================= slowest 15 durations =============================
+1.60s call     python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_report_debug_error[arch=cuda]
+1.06s setup    python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=cuda-False]
+0.67s call     python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=cuda-False]
+0.32s call     python/test_csr_spmm.py::test_csr_spmm_duplicates_empty_rows_and_poison_tail[arch=cuda]
+0.31s call     python/test_csr_spmm.py::test_csr_spmm_producer_two_calls_and_consumer[arch=cuda]
+0.29s call     python/test_csr_spmm.py::test_csr_kernel_product_evaluates_rhs_once_and_reads_current_contents[arch=cuda]
+0.17s call     python/test_csr_spmm.py::test_csr_nested_typed_binding_and_specialization[arch=cuda]
+0.15s setup    python/test_csr_spmm.py::test_csr_spmm_updated_values_and_rhs_in_existing_buffers[arch=cuda]
+0.14s call     python/test_csr_spmm.py::test_csr_spmm_difficult_cancellation_and_long_rows[arch=cuda]
+0.13s setup    python/test_csr_spmm.py::test_csr_spmm_rectangular_widths_and_changed_bindings[arch=cuda]
+0.13s teardown python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_report_debug_error[arch=cuda]
+0.13s setup    python/test_csr_spmm.py::test_csr_spmm_producer_two_calls_and_consumer[arch=cuda]
+0.12s setup    python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=cuda-True]
+0.12s setup    python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_report_debug_error[arch=cuda]
+0.12s call     python/test_csr_spmm.py::test_csr_spmm_rectangular_widths_and_changed_bindings[arch=cuda]
+======================== 16 passed, 3 skipped in 8.16s =========================

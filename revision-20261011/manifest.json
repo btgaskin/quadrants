@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-10T10:50:08.336062+00:00",
+  "purpose": "Local public evidence supplement awaiting publication approval",
+  "baseline": "Original direct-call implementation from unmerged PR #967 at 40e7289",
+  "measured_source_hashes_verified": true,
+  "files": {
+    "README.md": "4b684a6547f8aa099e5626573c7ae71452027a27212b3b725eed29f692e25c4a",
+    "api-smoke/README.md": "ea01a469cb9c1cc14a889cbd5e7a6928d1180caaba5705546db793835f9ca7a8",
+    "api-smoke/api-smoke.log": "9b89954af680730aa646a3cbfd3f11f5401db565584bc63ef1c28128576eb8e5",
+    "api-smoke/api-smoke.py": "8ff3d069c4076ab0e7d1671c54043e6a4b8726918c27e407b9f6d02282c90f29",
+    "api-smoke/handoff-manifest.json": "71e18e0d1e37b739d1cf47b9e7b2b7479713a0070e3efb4839b08268e70bbe44",
+    "api-smoke/measured-ast-transformer.py": "9e9a3ce5f6cd6b5c8b62c197c7ef6c87f63e840de7b8ae035bc69a60517fe517",
+    "api-smoke/measured-sources/python/quadrants/linalg/_csr.py": "59ca41743a4630ff1a8d0639e8f8362bbd55380b072914c467f5f592a2e65a75",
+    "api-smoke/original-source/python/quadrants/algorithms/_csr.py": "9198b31c8e9905a935e1bb568461a3b000189064041672f5e2b2a240dd30e797",
+    "api-smoke/original-source.json": "02da285ac6bfbf64da9237e2ac2648f21b53d330147e29708b940cadec34835f",
+    "api-smoke/receipt.json": "ce73469731b2f9c552b7a5e05b66d056768a10e0c3ce6b46da5be0330a97b450",
+    "api-smoke/revision-at-measurement.patch": "1ada240f44b6c80138ca1c1ffe4afae4527dcfea0f5fe679b4fd841bd8cf8947",
+    "portability/README.md": "cca20dff7ba529557b61a9ede1709c0d8bc310397822f98a8b33f79d800d4207",
+    "portability/cuda-csr.log": "f8c0fe0274744a3721f86ee3aa6fcf86997182538772315fb08bb1481bc7034a",
+    "portability/cuda-csr.xml": "4b9478db2f7f96b811715faa742ee6fe6f7c5c1dac366876e6b47157d0ec2b86",
+    "portability/linux-cpu-api-csr.log": "149ba8c7a0ee69689b8ef518db14f6ec67bc8ebe0c64c7bfa7562744d8e29a77",
+    "portability/linux-cpu-api-csr.xml": "26341c257c9c294788b92434da93fe33c9fbd2ac83f7ceeed003e1535e35e0b3",
+    "portability/portability-receipt.json": "3a034ca1e3ec9b9516d5535868095ab6daa6f9047724839bf8c89acc864c3e3a",
+    "portability/requirements.txt": "ee77d6b6eb3016a5b5c143736021fbe9ebc0f8656fd1d3a800d01ff42daeccd0",
+    "portability/revision-at-portability-test.patch": "257ef3e9a057c4acd7487f4d5d0086de63faf6cd9abd3b204b63d79c218b30a8",
+    "portability/revision-from-base.patch": "6ee35dc227e0c739f408e9f748ec9c01ecd61bf58de8d836e6b51b4d0e462e15"
+  },
+  "updated_utc": "2026-10-10T11:25:27.330826+00:00"
+}

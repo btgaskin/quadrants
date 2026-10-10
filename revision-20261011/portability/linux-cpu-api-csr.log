@@ -1,0 +1,87 @@
+Namespace(files=[], cpp=False, show_output=False, verbose=True, rerun=None, keys='csr_spmm or test_api', marks='not needs_torch', run_slow=False, failed_first=None, fail_fast=None, maxfail=1, coverage=None, timeout=600, cov_append=None, threads='1', arch='cpu', exclusive=False)
+Running on Arch=cpu
+
+Running Python tests...
+
+Starting 1 testing thread(s)...
+============================= test session starts ==============================
+platform linux -- Python 3.10.13, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /payload/tests
+configfile: pytest.ini
+plugins: quadrants-1.3.4.dev10+g9b758de85, rerunfailures-15.1, cov-7.1.0, platformdirs-4.12.4, xdist-3.8.0, nbmake-1.5.5, retry-1.7.0, typeguard-4.3.0
+timeout: 600s
+timeout func_only: False
+collecting ... collected 5762 items / 5724 deselected / 5 skipped / 38 selected
+
+tests/python/test_api.py::test_api[arch=x64-quadrants] PASSED            [  2%]
+tests/python/test_api.py::test_api[arch=x64-quadrants.lang.graph] PASSED [  5%]
+tests/python/test_api.py::test_api[arch=x64-quadrants.ad] PASSED         [  7%]
+tests/python/test_api.py::test_api[arch=x64-quadrants.algorithms] PASSED [ 10%]
+tests/python/test_api.py::test_api[arch=x64-Field] PASSED                [ 13%]
+tests/python/test_api.py::test_api[arch=x64-FieldsBuilder] PASSED        [ 15%]
+tests/python/test_api.py::test_api[arch=x64-quadrants.math] PASSED       [ 18%]
+tests/python/test_api.py::test_api[arch=x64-Matrix] PASSED               [ 21%]
+tests/python/test_api.py::test_api[arch=x64-MatrixField] PASSED          [ 23%]
+tests/python/test_api.py::test_api[arch=x64-MatrixNdarray] PASSED        [ 26%]
+tests/python/test_api.py::test_api[arch=x64-Ndarray] PASSED              [ 28%]
+tests/python/test_api.py::test_api[arch=x64-SNode] PASSED                [ 31%]
+tests/python/test_api.py::test_api[arch=x64-ScalarField] PASSED          [ 34%]
+tests/python/test_api.py::test_api[arch=x64-ScalarNdarray] PASSED        [ 36%]
+tests/python/test_api.py::test_api[arch=x64-Struct] PASSED               [ 39%]
+tests/python/test_api.py::test_api[arch=x64-StructField] PASSED          [ 42%]
+tests/python/test_api.py::test_api[arch=x64-VectorNdarray] PASSED        [ 44%]
+tests/python/test_api.py::test_api[arch=x64-quadrants.interop] PASSED    [ 47%]
+tests/python/test_api.py::test_api[arch=x64-quadrants.sparse] PASSED     [ 50%]
+tests/python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=x64-False] PASSED [ 52%]
+tests/python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=x64-True] PASSED [ 55%]
+tests/python/test_csr_spmm.py::test_csr_spmm_duplicates_empty_rows_and_poison_tail[arch=x64] PASSED [ 57%]
+tests/python/test_csr_spmm.py::test_csr_spmm_rectangular_widths_and_changed_bindings[arch=x64] PASSED [ 60%]
+tests/python/test_csr_spmm.py::test_csr_spmm_updated_values_and_rhs_in_existing_buffers[arch=x64] PASSED [ 63%]
+tests/python/test_csr_spmm.py::test_csr_spmm_producer_two_calls_and_consumer[arch=x64] PASSED [ 65%]
+tests/python/test_csr_spmm.py::test_csr_spmm_ping_pong_recurrence[arch=x64] PASSED [ 68%]
+tests/python/test_csr_spmm.py::test_csr_spmm_shared_column_and_independent_ragged_batches[arch=x64] PASSED [ 71%]
+tests/python/test_csr_spmm.py::test_csr_spmm_difficult_cancellation_and_long_rows[arch=x64] PASSED [ 73%]
+tests/python/test_csr_spmm.py::test_csr_spmm_float32_accumulator_with_float64_default[arch=x64] PASSED [ 76%]
+tests/python/test_csr_spmm.py::test_csr_host_product_borrows_buffers_and_reads_current_contents[arch=x64] PASSED [ 78%]
+tests/python/test_csr_spmm.py::test_csr_kernel_product_evaluates_rhs_once_and_reads_current_contents[arch=x64] PASSED [ 81%]
+tests/python/test_csr_spmm.py::test_csr_metadata_validation[arch=x64] PASSED [ 84%]
+tests/python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_do_not_access_storage[arch=x64] PASSED [ 86%]
+tests/python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_report_debug_error[arch=x64] PASSED [ 89%]
+tests/python/test_csr_spmm.py::test_csr_nested_typed_binding_and_specialization[arch=x64] PASSED [ 92%]
+tests/python/test_csr_spmm.py::test_csr_native_interoperability_errors[arch=x64] PASSED [ 94%]
+tests/python/test_csr_spmm.py::test_csr_rejects_reverse_mode[arch=x64] PASSED [ 97%]
+tests/python/test_csr_spmm.py::test_csr_public_exports[none] PASSED      [100%]
+
+=============================== warnings summary ===============================
+../usr/local/lib/python3.10/site-packages/quadrants/lang/util.py:65
+../usr/local/lib/python3.10/site-packages/quadrants/lang/util.py:65
+  /usr/local/lib/python3.10/site-packages/quadrants/lang/util.py:65: DeprecationWarning: Use shutil.which instead of find_executable
+    if find_executable(c) is not None:
+
+tests/python/test_field.py:349
+  /payload/tests/python/test_field.py:349: DeprecationWarning: invalid escape sequence '\.'
+    match="Detected illegal element of type: .*?\. Please be aware that slicing a qd.field is not supported so far.",
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+-------------- generated xml file: /results/linux-cpu-api-csr.xml --------------
+
+Learn more about nbmake at https://github.com/treebeardtech/nbmake
+
+============================= slowest 15 durations =============================
+0.50s call     python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=x64-False]
+0.43s teardown python/test_api.py::test_api[arch=x64-ScalarField]
+0.41s call     python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_report_debug_error[arch=x64]
+0.32s call     python/test_csr_spmm.py::test_csr_spmm_float32_accumulator_with_float64_default[arch=x64]
+0.32s teardown python/test_csr_spmm.py::test_csr_kernel_invalid_shapes_report_debug_error[arch=x64]
+0.31s call     python/test_csr_spmm.py::test_csr_spmm_duplicates_empty_rows_and_poison_tail[arch=x64]
+0.30s teardown python/test_csr_spmm.py::test_csr_rejects_reverse_mode[arch=x64]
+0.30s teardown python/test_api.py::test_api[arch=x64-SNode]
+0.28s call     python/test_csr_spmm.py::test_csr_spmm_producer_two_calls_and_consumer[arch=x64]
+0.28s teardown python/test_csr_spmm.py::test_csr_spmm_rejects_nested_runtime_calls[arch=x64-False]
+0.28s call     python/test_csr_spmm.py::test_csr_kernel_product_evaluates_rhs_once_and_reads_current_contents[arch=x64]
+0.27s teardown python/test_csr_spmm.py::test_csr_spmm_producer_two_calls_and_consumer[arch=x64]
+0.27s teardown python/test_csr_spmm.py::test_csr_nested_typed_binding_and_specialization[arch=x64]
+0.27s teardown python/test_api.py::test_api[arch=x64-ScalarNdarray]
+0.27s teardown python/test_csr_spmm.py::test_csr_native_interoperability_errors[arch=x64]
+========= 38 passed, 5 skipped, 5724 deselected, 3 warnings in 29.90s ==========

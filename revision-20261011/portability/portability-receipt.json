@@ -1,0 +1,207 @@
+{
+  "created_utc": "2026-10-10T09:41:36.337608+00:00",
+  "published_head": "40e7289ec619148cfb8eaa3b8bd1d7d7491d73d1",
+  "source_state": "local uncommitted revision",
+  "files": {
+    "docs/source/user_guide/algorithms.md": "ac3bf399c25775397c0e03b9ca4487901d62e3f5c8714fed4b29a29980106b68",
+    "docs/source/user_guide/csr_spmm.md": "deleted",
+    "docs/source/user_guide/index.md": "9d422819fcd5d59d815c57f206303255cf608d6eb845e6d8c96a42f925af90a8",
+    "misc/demos/csr_spmm_esn.py": "deleted",
+    "python/quadrants/algorithms/__init__.py": "ee3d5817e10b497cacc3e5b0a4ce1f8c3bf58ee6cd050fcd5bac1dc7d23a2303",
+    "python/quadrants/algorithms/_csr.py": "deleted",
+    "python/quadrants/examples/csr_spmm.py": "deleted",
+    "python/quadrants/lang/ast/ast_transformer.py": "e1290d74bf9b4da148b55395ea98d3a13f9b83a11493dbfcbb0cacd73abe916e",
+    "python/quadrants/linalg/__init__.py": "c7b4c7f18b625a1385571add805bfa26eaf7ad3ebbb219d64ec17bb9d2e1dd9c",
+    "python/quadrants/linalg/_csr.py": "04bb30570a17313ca5f1542f888415c866dbd15ef12b143568630e6369aafb1e",
+    "python/quadrants/linalg/sparse_cg.py": "dbe07ea52e374f34d9e7a2213c4cfd0485194810b5f5b69291cb5a05aa5d8d97",
+    "python/quadrants/linalg/sparse_matrix.py": "38131d721b2334cfa0c4d8c86465e99501424b9e32bde9f6a57a7d386e6392cf",
+    "tests/python/test_csr_spmm.py": "8ac67403515190e9048ba54b4cf183dcc5e776f6febaac848928080f7a942b0e",
+    "tests/python/test_csr_spmm_esn_demo.py": "deleted"
+  },
+  "remote_environment": {
+    "python": "3.10.13 (main, Aug 26 2023, 07:12:19) [Clang 16.0.3 ]",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+    "cuda_image": "12.8.1-devel-ubuntu22.04",
+    "gpu": "Tesla T4, 610.57.04, 7.5",
+    "fallback_enabled": false,
+    "wheel": "quadrants-1.3.4.dev10+g9b758de85-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "wheel_sha256": "fbf3508450d675125a71023726bb1a673b135ee7d405572ea52d4596c098bfc9",
+    "native_files": {
+      "_lib/core/quadrants_python.cpython-310-x86_64-linux-gnu.so": "55c2e52e78d940d78ea3cb82887befc7964e5034d2efe27ee1209f68b2b7d3a4"
+    },
+    "method": "Identified CI wheel with public Python sources overlaid; native and staged-source hashes checked"
+  },
+  "checks": {
+    "cuda": {
+      "name": "cuda-csr",
+      "command": [
+        "/usr/local/bin/python",
+        "tests/run_tests.py",
+        "csr_spmm",
+        "--arch",
+        "cuda",
+        "-t",
+        "1",
+        "-v",
+        "--maxfail",
+        "1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.797984434,
+      "counts": {
+        "passed": 16,
+        "skipped": 3,
+        "failed": 0
+      },
+      "executed": [
+        "test_csr_spmm_rejects_nested_runtime_calls[arch=cuda-False]",
+        "test_csr_spmm_rejects_nested_runtime_calls[arch=cuda-True]",
+        "test_csr_spmm_duplicates_empty_rows_and_poison_tail[arch=cuda]",
+        "test_csr_spmm_rectangular_widths_and_changed_bindings[arch=cuda]",
+        "test_csr_spmm_updated_values_and_rhs_in_existing_buffers[arch=cuda]",
+        "test_csr_spmm_producer_two_calls_and_consumer[arch=cuda]",
+        "test_csr_spmm_ping_pong_recurrence[arch=cuda]",
+        "test_csr_spmm_shared_column_and_independent_ragged_batches[arch=cuda]",
+        "test_csr_spmm_difficult_cancellation_and_long_rows[arch=cuda]",
+        "test_csr_host_product_borrows_buffers_and_reads_current_contents[arch=cuda]",
+        "test_csr_kernel_product_evaluates_rhs_once_and_reads_current_contents[arch=cuda]",
+        "test_csr_metadata_validation[arch=cuda]",
+        "test_csr_kernel_invalid_shapes_do_not_access_storage[arch=cuda]",
+        "test_csr_kernel_invalid_shapes_report_debug_error[arch=cuda]",
+        "test_csr_nested_typed_binding_and_specialization[arch=cuda]",
+        "test_csr_public_exports[none]"
+      ],
+      "skipped": [
+        "test_csr_spmm_float32_accumulator_with_float64_default",
+        "test_csr_native_interoperability_errors",
+        "test_csr_rejects_reverse_mode"
+      ],
+      "report_complete": true
+    },
+    "native_linux_cpu": {
+      "name": "linux-cpu-api-csr",
+      "command": [
+        "/usr/local/bin/python",
+        "tests/run_tests.py",
+        "--arch",
+        "cpu",
+        "-t",
+        "1",
+        "-v",
+        "--maxfail",
+        "1",
+        "-k",
+        "csr_spmm or test_api",
+        "-m",
+        "not needs_torch"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 33.666418045,
+      "counts": {
+        "passed": 38,
+        "skipped": 5,
+        "failed": 0
+      },
+      "executed": [
+        "test_api[arch=x64-quadrants]",
+        "test_api[arch=x64-quadrants.lang.graph]",
+        "test_api[arch=x64-quadrants.ad]",
+        "test_api[arch=x64-quadrants.algorithms]",
+        "test_api[arch=x64-Field]",
+        "test_api[arch=x64-FieldsBuilder]",
+        "test_api[arch=x64-quadrants.math]",
+        "test_api[arch=x64-Matrix]",
+        "test_api[arch=x64-MatrixField]",
+        "test_api[arch=x64-MatrixNdarray]",
+        "test_api[arch=x64-Ndarray]",
+        "test_api[arch=x64-SNode]",
+        "test_api[arch=x64-ScalarField]",
+        "test_api[arch=x64-ScalarNdarray]",
+        "test_api[arch=x64-Struct]",
+        "test_api[arch=x64-StructField]",
+        "test_api[arch=x64-VectorNdarray]",
+        "test_api[arch=x64-quadrants.interop]",
+        "test_api[arch=x64-quadrants.sparse]",
+        "test_csr_spmm_rejects_nested_runtime_calls[arch=x64-False]",
+        "test_csr_spmm_rejects_nested_runtime_calls[arch=x64-True]",
+        "test_csr_spmm_duplicates_empty_rows_and_poison_tail[arch=x64]",
+        "test_csr_spmm_rectangular_widths_and_changed_bindings[arch=x64]",
+        "test_csr_spmm_updated_values_and_rhs_in_existing_buffers[arch=x64]",
+        "test_csr_spmm_producer_two_calls_and_consumer[arch=x64]",
+        "test_csr_spmm_ping_pong_recurrence[arch=x64]",
+        "test_csr_spmm_shared_column_and_independent_ragged_batches[arch=x64]",
+        "test_csr_spmm_difficult_cancellation_and_long_rows[arch=x64]",
+        "test_csr_spmm_float32_accumulator_with_float64_default[arch=x64]",
+        "test_csr_host_product_borrows_buffers_and_reads_current_contents[arch=x64]",
+        "test_csr_kernel_product_evaluates_rhs_once_and_reads_current_contents[arch=x64]",
+        "test_csr_metadata_validation[arch=x64]",
+        "test_csr_kernel_invalid_shapes_do_not_access_storage[arch=x64]",
+        "test_csr_kernel_invalid_shapes_report_debug_error[arch=x64]",
+        "test_csr_nested_typed_binding_and_specialization[arch=x64]",
+        "test_csr_native_interoperability_errors[arch=x64]",
+        "test_csr_rejects_reverse_mode[arch=x64]",
+        "test_csr_public_exports[none]"
+      ],
+      "skipped": [
+        "python.gstaichi.lang.python_backend.test_python_backend_tensor",
+        "python.quadrants.lang.test_dlpack",
+        "python.test_ad_ndarray_torch",
+        "python.test_to_torch_copy",
+        "python.test_torch_direct"
+      ],
+      "report_complete": true
+    },
+    "local_cpu": {
+      "passed": 19,
+      "log": "local-cpu-final.log"
+    },
+    "local_metal": {
+      "passed": 15,
+      "skipped": 4,
+      "log": "local-metal-final.log"
+    },
+    "pre_commit": {
+      "passed": true,
+      "logs": [
+        "pre-commit-final.log",
+        "pre-commit-fix.log"
+      ]
+    },
+    "scoped_library_pyright": {
+      "errors": 0,
+      "warnings": 0,
+      "log": "pyright-production-final.log"
+    },
+    "sphinx_html": {
+      "passed": true,
+      "warnings": 62,
+      "log": "docs.log"
+    }
+  },
+  "cuda_run": {
+    "app_id": "ap-QFDqeVeQLU5BbzmvXzPUvj",
+    "cuda_phase_exit_code": 0,
+    "whole_invocation_exit_code": 1,
+    "later_cpu_collection_error": "Missing staged public python/tools checker; corrected in separate CPU-only run"
+  },
+  "cpu_run": {
+    "app_id": "ap-rpcgNLVToQz4oGbqsgcFHo",
+    "exit_code": 0
+  },
+  "resources": {
+    "ephemeral": true,
+    "automatic_retries": 0,
+    "persistent_volume": false,
+    "all_eight_task_apps_stopped": true
+  },
+  "earlier_performance": "Saved M5 API timings predate the metadata-assertion correction; arithmetic and binding are unchanged. No CUDA performance claim.",
+  "later_documentation_only_clarification": {
+    "file": "docs/source/user_guide/algorithms.md",
+    "sha256": "c89cdb32b967bd881e2c64e37380267a03ee942c077502eb057c4cd0197da8d2",
+    "text": "Kernel shape precondition, silent release output preservation and supported debug diagnostics; Metal/Linux ARM64 limits",
+    "executable_sources_unchanged": true,
+    "doc_pre_commit_passed": true,
+    "sphinx_html_passed": true,
+    "sphinx_warnings": 62
+  }
+}

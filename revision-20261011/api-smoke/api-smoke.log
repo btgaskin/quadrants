@@ -1,0 +1,16 @@
+[Quadrants] version 1.1.4, llvm 22.1.0, commit 82467d54, osx, python 3.10.20
+[Quadrants] Starting on arch=metal
+{
+  "median_ms": {
+    "published_csr": 6.906417,
+    "typed_csr": 7.3765,
+    "host_csr": 7.486,
+    "dense": 70.708833
+  },
+  "ratios": {
+    "typed_over_published": 1.0600513750920622,
+    "host_over_published": 1.0881819324938478,
+    "dense_over_typed": 9.581483507003787
+  },
+  "checks": "all four outputs match independent float64 reference within atol=2e-6, rtol=2e-5; qualified outputs byte-identical; every timed output equals its qualified output"
+}

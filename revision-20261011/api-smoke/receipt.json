@@ -1,0 +1,80 @@
+{
+  "hardware": "Apple M5",
+  "os": "macOS-26.4.1-arm64-arm-64bit",
+  "python": "3.10.20",
+  "quadrants": [
+    1,
+    1,
+    4
+  ],
+  "source": "/Users/bengaskin/dev/quadrants/python/quadrants/__init__.py",
+  "head": "40e7289ec619148cfb8eaa3b8bd1d7d7491d73d1",
+  "baseline_sha256": "9198b31c8e9905a935e1bb568461a3b000189064041672f5e2b2a240dd30e797",
+  "revised_sources": {
+    "python/quadrants/linalg/_csr.py": "59ca41743a4630ff1a8d0639e8f8362bbd55380b072914c467f5f592a2e65a75",
+    "python/quadrants/lang/ast/ast_transformer.py": "9e9a3ce5f6cd6b5c8b62c197c7ef6c87f63e840de7b8ae035bc69a60517fe517"
+  },
+  "command": "SKBUILD_EDITABLE_SKIP=/Users/bengaskin/dev/quadrants/build/cp310-cp310-macosx_26_0_arm64 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python outputs/csr-spmm/pr-revision/20261010/api-smoke.py",
+  "case": {
+    "seed": 7,
+    "N": 512,
+    "degree": 16,
+    "B": 32,
+    "K": 1,
+    "steps": 256
+  },
+  "protocol": "2 warmup blocks; 5 rotating/reversed paired rounds; resident inputs; synchronous wall time for 256 launches; no fallback; fast_math=False; debug=False; offline_cache=False",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "load_before_receipt": [
+    3.97216796875,
+    2.8974609375,
+    2.4970703125
+  ],
+  "samples_ms": {
+    "published_csr": [
+      7.208667,
+      6.958625,
+      6.906417,
+      6.824958,
+      6.73175
+    ],
+    "typed_csr": [
+      7.372584,
+      7.3765,
+      7.3925,
+      7.387,
+      6.907959
+    ],
+    "host_csr": [
+      7.486,
+      7.57225,
+      7.493,
+      7.453625,
+      7.39975
+    ],
+    "dense": [
+      70.640292,
+      70.5405,
+      70.708833,
+      70.949625,
+      73.118584
+    ]
+  },
+  "median_ms": {
+    "published_csr": 6.906417,
+    "typed_csr": 7.3765,
+    "host_csr": 7.486,
+    "dense": 70.708833
+  },
+  "paired_ratio_medians": {
+    "typed_over_published": 1.0600513750920622,
+    "host_over_published": 1.0881819324938478,
+    "dense_over_typed": 9.581483507003787
+  },
+  "checks": "all four outputs match independent float64 reference within atol=2e-6, rtol=2e-5; qualified outputs byte-identical; every timed output equals its qualified output",
+  "limits": "Short multiplication-only smoke measurement on interactive desktop; one seed and one K=1 configuration; excludes preparation and scientific workflow; host path reuses a deferred product."
+}
